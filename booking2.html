@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - MindHaven Mentalcare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body class="services-page">
+    <section>
+    <header>
+        <nav>
+            <div class="logo">MindHaven</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services2.html">Services</a></li>
+                <li><a href="booking.html">Booking Appointments</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+    </section>
+    <!-- Registration Form --> <section id="register-section" class="active"> <h2>Register</h2> <form id="register-form"> <label for="full_name">Full Name:</label> <input type="text" id="full_name" name="full_name" required><br> <label for="email">Email:</label> <input type="email" id="email" name="email" required><br> <label for="password">Password:</label> <input type="password" id="password" name="password" required><br> <label for="security_question">Security Question:</label> <select id="security_question" name="security_question" required> <option value="">Select a question...</option> <option value="What is your pet's name?">What is your pet's name?</option> <option value="What is your mother's maiden name?">What is your mother's maiden name?</option> <option value="What was your first car?">What was your first car?</option> </select><br> <label for="security_answer">Answer:</label> <input type="text" id="security_answer" name="security_answer" required><br> <button type="submit">Register</button> </form> <button id="show-login">Already have an account? Log in</button> </section> <!-- Login Form --> <section id="login-section"> <h2>Login</h2> <form id="login-form"> <label for="email">Email:</label> <input type="email" id="email" name="email" required><br> <label for="password">Password:</label> <input type="password" id="password" name="password" required><br> <button type="submit">Login</button> </form> <button id="show-register">Don't have an account? Register</button> <button id="show-forgot-password">Forgot Password</button> </section> <!-- Forgot Password Form --> <section id="forgot-password-section"> <h2>Forgot Password</h2> <form id="forgot-password-form"> <label for="email">Email:</label> <input type="email" id="email" name="email" required><br> <button type="submit">Next</button> </form> <button id="show-login-from-forgot">Back to Login</button> </section> <!-- Reset Password Form with Security Question --> <section id="reset-password-section"> <h2>Reset Password</h2> <form id="reset-password-form"> <label for="email">Email:</label> <input type="email" id="reset-email" name="email" required><br> <label id="security-question-label"></label> <input type="text" id="security_answer" name="security_answer" required><br> <label for="new_password">New Password:</label> <input type="password" id="new_password" name="new_password" required><br> <button type="submit">Reset Password</button> </form> <button id="show-login-from-reset">Back to Login</button> </section> <!-- Booking Section --> <section id="booking-section"> <h2>Book an Appointment</h2> <form id="booking-form"> <label for="full_name">Full Name:</label> <input type="text" id="full_name" name="full_name" required><br> <label for="email">Email:</label> <input type="email" id="email" name="email" required><br> <label for="phone">Phone:</label> <input type="text" id="phone" name="phone" required><br> <label for="date">Date:</label> <input type="date" id="date" name="date" required><br> <label for="time">Time:</label> <input type="time" id="time" name="time" required><br> <label for="message">Message:</label> <textarea id="message" name="message" required></textarea><br> <button type="submit">Book Appointment</button> </form> </section>
+
+<section>
+    <footer>
+        <div class="container">
+            <!-- Contact Us aligned to the left -->
+            <div class="footer-content" style="text-align: left;">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Our Facility Location</p>
+                <p><i class="fas fa-phone-alt"></i> +123 456 789</p>
+                <p><i class="fas fa-phone-alt"></i> +987 654 321</p>
+                <p><i class="fas fa-envelope"></i> email@company.com</p>
+            </div>
+    
+            <!-- Quick Links aligned to the center -->
+            <div class="footer-content" style="text-align: center;">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services2.html">Services</a></li>
+                    <li><a href="booking.html">Booking Appointments</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About</a></li>
+
+
+                </ul>
+            </div>
+    
+            <!-- Facility Details aligned to the right -->
+            <div class="footer-content" style="text-align: right;">
+                <h3></h3>
+              <ul><li><img src="images/logo.webp" alt="Logo" style="display: block; margin: 0 auto 10px;"></li> 
+                <li><p>Experience personalized mental health support at MindHaven, where your path to healing and growth begins</p></li>
+            </ul>
+            </div>
+        </div>
+    
+        <div class="bottom-bar">
+            <p>Copyright © Mindhaven. All rights reserved.</p>
+        </div>
+    </footer>
+    </section>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recommendations - Mental Health Support</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation bar (replace with your links if needed) -->
+  <nav>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+        
+  </nav>
+
+  <section id="recommendations">
+    <h2>Mental Health Issue Categories</h2>
+    <p>Select a mental health issue from the dropdown below to see recommendations.</p>
+
+    <!-- Dropdown to select a mental health issue -->
+    <label for="issueSelect">Select a Mental Health Issue:</label>
+    <select id="issueSelect" onchange="showRecommendation()">
+      <option value="">Select an issue</option>
+      <option value="anxiety">Anxiety</option>
+      <option value="depression">Depression</option>
+      <option value="stress">Stress</option>
+      <option value="bipolar">Bipolar Disorder</option>
+      <option value="ptsd">PTSD</option>
+    </select>
+
+    <!-- Section where the recommendations will be displayed -->
+    <div id="recommendation" class="recommendation"></div>
+  </section>
+
+  <script>
+    // JavaScript function for displaying recommendations based on selected issue
+    function showRecommendation() {
+      const issueSelect = document.getElementById('issueSelect');
+      const recommendationDiv = document.getElementById('recommendation');
+      const selectedIssue = issueSelect.value;
+
+      let recommendation = '';
+
+      switch (selectedIssue) {
+        case 'anxiety':
+          recommendation = `
+            <h3>Recommendations for Anxiety</h3>
+            <ul>
+              <li>Practice deep breathing exercises and meditation.</li>
+              <li>Engage in regular physical activity.</li>
+              <li>Limit caffeine and alcohol intake.</li>
+              <li>Seek professional therapy if symptoms persist.</li>
+            </ul>
+          `;
+          break;
+        case 'depression':
+          recommendation = `
+            <h3>Recommendations for Depression</h3>
+            <ul>
+              <li>Stay connected with supportive friends and family.</li>
+              <li>Engage in activities you once enjoyed.</li>
+              <li>Consider seeking help from a mental health professional.</li>
+              <li>Practice self-compassion and avoid self-criticism.</li>
+            </ul>
+          `;
+          break;
+        case 'stress':
+          recommendation = `
+            <h3>Recommendations for Stress</h3>
+            <ul>
+              <li>Prioritize time management and organize tasks.</li>
+              <li>Take short breaks during work or study sessions.</li>
+              <li>Engage in relaxing activities such as reading or listening to music.</li>
+              <li>Consider mindfulness practices like yoga or meditation.</li>
+            </ul>
+          `;
+          break;
+        case 'bipolar':
+          recommendation = `
+            <h3>Recommendations for Bipolar Disorder</h3>
+            <ul>
+              <li>Follow a consistent daily routine.</li>
+              <li>Avoid alcohol and substance use.</li>
+              <li>Track your moods and recognize patterns.</li>
+              <li>Consult a healthcare provider about treatment options.</li>
+            </ul>
+          `;
+          break;
+        case 'ptsd':
+          recommendation = `
+            <h3>Recommendations for PTSD</h3>
+            <ul>
+              <li>Connect with support groups or therapy options.</li>
+              <li>Practice grounding techniques to manage flashbacks.</li>
+              <li>Engage in relaxing physical activities.</li>
+              <li>Consider consulting a mental health professional.</li>
+            </ul>
+          `;
+          break;
+        default:
+          recommendation = '<p>Please select a mental health issue to view recommendations.</p>';
+      }
+
+      recommendationDiv.innerHTML = recommendation;
+    }
+  </script>
+</body>
+</html>

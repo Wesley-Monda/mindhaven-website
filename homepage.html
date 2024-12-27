@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Inner Peace Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1 class="organization-name">Inner Peace Network</h1>
+    <p class="slogan"><span id="slogan-text">Hope</span></p>
+</header>
+
+<main>
+      <!-- Hero Section with Alternating Background Images -->
+      <section class="hero-section">
+        <div class="image-container">
+            <div class="background-section">
+                <h2>Welcome to Inner Peace Network</h2>
+                <p>Your journey to mental well-being starts here.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation Section with Sparkling Link Buttons -->
+    <section class="navigation-section">
+        <h2>Explore Our Site</h2>
+        <div class="navigation">
+            <a href="about.html" class="nav-btn sparkle">About Us</a>
+            <a href="services.html" class="nav-btn sparkle">Our Services</a>
+            <a href="resources.html" class="nav-btn sparkle">Resources</a>
+            <a href="contact.html" class="nav-btn sparkle">Contact Us</a>
+            <a href="register2.php" class="nav-btn sparkle">Sign Up</a>
+            <a href="login2.php" class="nav-btn sparkle">Log In</a>
+        </div>
+    </section>
+
+</main>
+<footer>
+    <p>&copy; 2024 Inner Peace Network - All Rights Reserved.</p>
+</footer>
+
+<script>// Array of images for the background
+    let images = [
+        "url('mental (1).jpg')", 
+        "url('mental (2).jpg')", 
+        "url('mental (3).jpg')"
+    ];
+    
+    let currentImageIndex = 0;
+    
+    // Function to change background image every 5 seconds
+    function changeBackgroundImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        document.querySelector('.background-section').style.backgroundImage = images[currentImageIndex];
+    }
+    
+    // Set interval to change background image every 5 seconds
+    setInterval(changeBackgroundImage, 5000); // 5000ms = 5 seconds
+    </script>
+</body>
+</html>

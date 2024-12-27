@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - MindHaven Mentalcare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body class="services-page">
+    <section>
+    <header>
+        <nav>
+            <div class="logo">MindHaven</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services2.html">Services</a></li>
+                <li><a href="booking.html">Booking Appointments</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+    </section>
+    <div class="container mt-5">
+        <!-- Registration Form -->
+        <section id="register-section" class="active">
+            <h2>Register</h2>
+            <form id="register-form" class="mb-3" method="POST" action="app2.php">
+                <input type="hidden" name="action" value="register">
+                <div class="mb-3">
+                    <label for="full_name" class="form-label">Full Name:</label>
+                    <input type="text" class="form-control" id="full_name" name="full_name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="security_question" class="form-label">Security Question:</label>
+                    <select class="form-select" id="security_question" name="security_question" required>
+                        <option value="">Select a question...</option>
+                        <option value="What is your pet's name?">What is your pet's name?</option>
+                        <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+                        <option value="What was your first car?">What was your first car?</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="security_answer" class="form-label">Answer:</label>
+                    <input type="text" class="form-control" id="security_answer" name="security_answer" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            <button id="show-login" class="btn btn-link">Already have an account? Log in</button>
+        </section>
+    
+        <!-- Login Form -->
+        <section id="login-section" class="d-none">
+            <h2>Login</h2>
+            <form id="login-form" class="mb-3" method="POST" action="app2.php">
+                <input type="hidden" name="action" value="login">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            <button id="show-register" class="btn btn-link">Don't have an account? Register</button>
+            <button id="show-forgot-password" class="btn btn-link">Forgot Password</button>
+        </section>
+    
+        <!-- Forgot Password Form -->
+        <section id="forgot-password-section" class="d-none">
+            <h2>Forgot Password</h2>
+            <form id="forgot-password-form" class="mb-3" method="POST" action="app2.php">
+                <input type="hidden" name="action" value="forgot_password">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Next</button>
+            </form>
+            <button id="show-login-from-forgot" class="btn btn-link">Back to Login</button>
+        </section>
+    
+        <!-- Reset Password Form with Security Question -->
+        <section id="reset-password-section" class="d-none">
+            <h2>Reset Password</h2>
+            <form id="reset-password-form" class="mb-3" method="POST" action="app2.php">
+                <input type="hidden" name="action" value="reset_password_with_security_answer">
+                <div class="mb-3">
+                    <label for="reset-email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="reset-email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label id="security-question-label" class="form-label"></label>
+                    <input type="text" class="form-control" id="security_answer" name="security_answer" required>
+                </div>
+                <div class="mb-3">
+                    <label for="new_password" class="form-label">New Password:</label>
+                    <input type="password" class="form-control" id="new_password" name="new_password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Reset Password</button>
+            </form>
+            <button id="show-login-from-reset" class="btn btn-link">Back to Login</button>
+        </section>
+    
+        <!-- Booking Section -->
+        <section id="booking-section" class="d-none">
+            <h2>Book Appointment</h2>
+            <form id="booking-form" method="POST" action="app2.php">
+                <input type="hidden" name="action" value="book_appointment">
+                <div class="mb-3">
+                    <label for="full_name" class="form-label">Full Name:</label>
+                    <input type="text" class="form-control" id="full_name" name="full_name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone:</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date:</label>
+                    <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+                <div class="mb-3">
+                    <label for="time" class="form-label">Time:</label>
+                    <input type="time" class="form-control" id="time" name="time" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Book Appointment</button>
+            </form>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src="script.js"></script>    
+            
+
+<section>
+    <footer>
+        <div class="container">
+            <!-- Contact Us aligned to the left -->
+            <div class="footer-content" style="text-align: left;">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Our Facility Location</p>
+                <p><i class="fas fa-phone-alt"></i> +123 456 789</p>
+                <p><i class="fas fa-phone-alt"></i> +987 654 321</p>
+                <p><i class="fas fa-envelope"></i> email@company.com</p>
+            </div>
+    
+            <!-- Quick Links aligned to the center -->
+            <div class="footer-content" style="text-align: center;">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services2.html">Services</a></li>
+                    <li><a href="booking.html">Booking Appointments</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About</a></li>
+
+
+                </ul>
+            </div>
+    
+            <!-- Facility Details aligned to the right -->
+            <div class="footer-content" style="text-align: right;">
+                <h3></h3>
+              <ul><li><img src="images/logo.webp" alt="Logo" style="display: block; margin: 0 auto 10px;"></li> 
+                <li><p>Experience personalized mental health support at MindHaven, where your path to healing and growth begins</p></li>
+            </ul>
+            </div>
+        </div>
+    
+        <div class="bottom-bar">
+            <p>Copyright © Mindhaven. All rights reserved.</p>
+        </div>
+    </footer>
+    </section>
+</body>
+</html>

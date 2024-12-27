@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Mental Health Support</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!-- Header with animated organization name and slogan -->
+      <header class="header">
+        <h1 class="organization-name">Inner Peace Network</h1>
+        <p class="slogan"><span id="slogan-text">Hope</span></p>
+    </header>
+
+    <!-- Page content goes here -->
+
+    <script>
+      // JavaScript for alternating slogan text
+const sloganText = document.getElementById("slogan-text");
+const slogans = ["Hope", "Heal", "Thrive"];
+let sloganIndex = 0;
+
+function changeSlogan() {
+    sloganIndex = (sloganIndex + 1) % slogans.length;
+    sloganText.textContent = slogans[sloganIndex];
+}
+
+// Change slogan every 2 seconds
+setInterval(changeSlogan, 2000);
+
+    </script>
+  <?php include('nav.php'); ?>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="about.html">About Us</a>
+    <a href="recommendations.html" class="recommendation-link">Check out our Mental Health Recommendations</a>
+  </nav>
+  <section>
+    <h2>Login</h2>
+    <form action="connector.php?action=login" method="post">
+      <label>Email: <input type="email" name="email" required></label>
+      <label>Password: <input type="password" name="password" required></label>
+      <button type="submit">Login</button>
+    </form>
+    <h2>Forgot Password</h2>
+    <form action="connector.php?action=forgot-password" method="post">
+      <label>Email: <input type="email" name="email" required></label>
+      <button type="submit">Reset Password</button>
+    </form>
+  </section>
+
+</script>
+  
+</body>
+</html>
